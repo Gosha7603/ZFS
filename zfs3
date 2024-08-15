@@ -1,0 +1,59 @@
+Script started on Wed 17 Jul 2024 03:22:19 PM UTC
+[root@localhost ~]# wget -O otus_task2.file --no-check-certificate https://drive.usercontent.google.com/download?id=1wgxjih8YZ-cqLqaZVa0lA3h3Y029c3oI&export=download
+[1] 24672
+[root@localhost ~]# --2024-07-17 15:22:26--  https://drive.usercontent.google.com/download?id=1wgxjih8YZ-cqLqaZVa0lA3h3Y029c3oI
+Resolving drive.usercontent.google.com (drive.usercontent.google.com)... 74.125.131.132, 2a00:1450:4010:c0e::84
+Connecting to drive.usercontent.google.com (drive.usercontent.google.com)|74.125.131.132|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5432736 (5.2M) [application/octet-stream]
+Saving to: ‘otus_task2.file’
+
+100%[==================================================================================>] 5,432,736   16.4MB/s   in 0.3s
+
+2024-07-17 15:22:34 (16.4 MB/s) - ‘otus_task2.file’ saved [5432736/5432736]
+
+
+[1]+  Done                    wget -O otus_task2.file --no-check-certificate https://drive.usercontent.google.com/download?id=1wgxjih8YZ-cqLqaZVa0lA3h3Y029c3oI
+[root@localhost ~]#
+[root@localhost ~]#
+[root@localhost ~]# find /otus/test -name "secret_message" /otus/test/task1/file_mess/secret_message
+find: paths must precede expression: /otus/test/task1/file_mess/secret_message
+Usage: find [-H] [-L] [-P] [-Olevel] [-D help|tree|search|stat|rates|opt|exec] [path...] [expression]
+[root@localhost ~]# find /otus/test -name "secret_message"
+find: ‘/otus/test’: No such file or directory
+[root@localhost ~]# /otus/test/task1/file_mess/secret_messagecat /otus/test/task1/file_mess/secret_message
+bash: /otus/test/task1/file_mess/secret_messagecat: No such file or directory
+[root@localhost ~]# https://otus.ru/lessons/linux-hl/
+bash: https://otus.ru/lessons/linux-hl/: No such file or directory
+[root@localhost ~]# zfs receive otus/test@today < otus_task2.file
+[root@localhost ~]# find /otus/test -name "secret_message"
+/otus/test/task1/file_mess/secret_message
+[root@localhost ~]# find /otus/test -name "secret_message" /otus/test/task1/file_mess/secret_message
+find: paths must precede expression: /otus/test/task1/file_mess/secret_message
+Usage: find [-H] [-L] [-P] [-Olevel] [-D help|tree|search|stat|rates|opt|exec] [path...] [expression]
+[root@localhost ~]#
+[root@localhost ~]#
+[root@localhost ~]# cat /otus/test/task1/file_mess/secret_message
+https://otus.ru/lessons/linux-hl/
+
+[root@localhost ~]# https://otus.ru/lessons/linux-hl/
+bash: https://otus.ru/lessons/linux-hl/: No such file or directory
+[root@localhost ~]# cat /otus/test/task1/file_mess/secret_message https://otus.ru/lessons/linux-hl/
+https://otus.ru/lessons/linux-hl/
+
+cat: https://otus.ru/lessons/linux-hl/: No such file or directory
+[root@localhost ~]# find /otus/test -name "secret_message"
+/otus/test/task1/file_mess/secret_message
+[root@localhost ~]#
+[root@localhost ~]#
+[root@localhost ~]# cat /otus/test/task1/file_mess/secret_message
+https://otus.ru/lessons/linux-hl/
+
+[root@localhost ~]#
+[root@localhost ~]#
+[root@localhost ~]#
+[root@localhost ~]#
+[root@localhost ~]#
+[root@localhost ~]# exit
+
+Script done on Wed 17 Jul 2024 03:26:56 PM UTC
